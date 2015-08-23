@@ -1,0 +1,18 @@
+{
+	"manifest_version": 2,
+	"name": "Focus-on",
+	"description": "this extension will give you a shortcut to focus on google/baidu's search textbox.",
+	"version": "1.0",
+
+	"content_scripts": [
+		{
+			"matches": ["https://www.baidu.com/*", "http://www.baidu.com/*"],
+			"js": ["Focus-on.js"],
+			"run_at": "document_end"
+		}
+	],
+	
+	"permissions": [
+		"tabs", "https://www.baidu.com/*", "http://www.baidu.com/*"
+	]
+}
