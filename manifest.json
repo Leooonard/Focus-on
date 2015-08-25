@@ -6,13 +6,26 @@
 
 	"content_scripts": [
 		{
-			"matches": ["https://www.baidu.com/*", "http://www.baidu.com/*"],
-			"js": ["Focus-on.js"],
+			"matches": [
+				"https://www.baidu.com/*", 
+				"http://www.baidu.com/*", 
+				"https://www.google.co.jp/*",
+				"http://www.google.co.jp/*",
+				"https://www.google.com/*",
+				"http://www.google.com/*"
+			],
+			"js": ["focus-on.js"],
 			"run_at": "document_end"
 		}
 	],
 	
 	"permissions": [
-		"tabs", "https://www.baidu.com/*", "http://www.baidu.com/*"
+		"tabs", 
+		"https://www.baidu.com/*", 
+		"http://www.baidu.com/*",
+		"https://www.google.co.jp/*",
+		"http://www.google.co.jp",
+		"https://www.google.com/*",
+		"http://www.google.com/*"
 	]
 }
