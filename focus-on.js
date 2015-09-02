@@ -4,6 +4,14 @@ var hasClass = function(element, className){
 	return new RegExp("(?:^|\\s+)" + className + "(?:\\s+|$)").test(element.className)
 }
 
+alert("focus on!")
+chrome.extension.sendRequest({
+	greeting: "hello",
+	function(response){
+		alert("response")
+	},
+})
+
 var conditions = [
 	"kw", //baidu
 	"lst-ib", //google 

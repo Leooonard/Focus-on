@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>key map</title>
+	<meta charset = "utf-8">
+	<script type="text/javascript">
+		window.addEventListener("load", function(e){
+			var keyString = "1234567890abcdefghijklmnopqrstuvwxyz,./".toUpperCase()
+			,	keyArray = keyString.split("")
+			,	keyArrayCopy = keyArray.slice()
+			,	keyCodeArray = []
+
+			var cb = function(){}
+			var resultButton = document.getElementById("resultButton")
+			resultButton.addEventListener("click", cb, false)
+			resultButton.removeEventListener("click", cb, false)
+
+			document.body.addEventListener("keydown", function(e){
+				console.log(e.which)			
+			}, false)
+		}, false)
+	</script>
+</head>
+<body>
+	<p>单击按键，观察console。</p>
+	<button id = "resultButton">查看json字符串</button>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>test</title>
+	<style type="text/css">
+		#div1{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+		#div2{
+			width: 100px;
+			height: 100px;
+			background-color: green;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var div1 = document.getElementById("div1")
+			div1.addEventListener("click", function(e){
+				console.log(e.target)
+			})
+		}
+	</script>
+</head>
+<body>
+	<div id="div1">
+		<div id="div2"></div>
+	</div>
+</body>
+</html>

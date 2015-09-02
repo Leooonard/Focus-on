@@ -4,28 +4,29 @@
 	"description": "this extension will give you a shortcut to focus on google/baidu's search textbox.",
 	"version": "1.0",
 
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_title": "Focus-on",
+		"default_popup": "focus-on.html"
+	},
+
 	"content_scripts": [
 		{
 			"matches": [
-				"https://www.baidu.com/*", 
-				"http://www.baidu.com/*", 
-				"https://www.google.co.jp/*",
-				"http://www.google.co.jp/*",
-				"https://www.google.com/*",
-				"http://www.google.com/*"
+				"*://*/*"
 			],
-			"js": ["focus-on.js"],
+			"js": ["content.js"],
 			"run_at": "document_end"
 		}
 	],
+
+	"background": {
+		"scripts": ["background.js"]
+	},
 	
 	"permissions": [
 		"tabs", 
-		"https://www.baidu.com/*", 
-		"http://www.baidu.com/*",
-		"https://www.google.co.jp/*",
-		"http://www.google.co.jp",
-		"https://www.google.com/*",
-		"http://www.google.com/*"
+		"storage",
+		"*://*/*"	
 	]
 }

@@ -2,9 +2,81 @@
 <html>
 <head>
 	<title>Focus-on</title>
-	<script type="text/javascript" src = "focus-on.js"></script>
+	<meta charset = "utf-8">
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+		html{
+			width: 300px;
+			padding: 5px;
+			border-radius: 4px;
+		}
+		body{
+			position: relative;
+			padding-top: 1px;
+		}
+		h1{
+			margin: 10px;
+		}
+		.button{
+			border: solid 1px #46b8da;
+			background-color: #5bc0de;
+			padding: 6px 12px;
+			margin: 15px 20px;
+			color: #fff;
+			border-radius: 5px;
+			text-align: center;
+			font-size: 1.2em;
+			cursor: pointer;
+		}
+		.recorded{
+			background-color: #5cb85c;
+			border: solid 1px #4cae4c;
+		}
+		.unrecorded{
+			background-color: #d9534f;
+			border: solid 1px #d43f3a;
+		}
+		.alert{
+			background-color: #d9534f; 
+			color: #fff;
+			font-size: 1.3em;
+			opacity: 1;
+			padding: 12px 0px;
+			text-align: center;
+			transition: all 0.5s;
+			position: absolute;
+			width: 100%;
+			top: 0px;
+			left: 0px;
+		}
+		.log{
+			background-color: #5cb85c; 
+			color: #fff;
+			font-size: 1.3em;
+			opacity: 1;
+			padding: 12px 0px;
+			text-align: center;
+			transition: all 0.5s;
+			position: absolute;
+			width: 100%;
+			top: 0px;
+			left: 0px;
+		}
+	</style>
+	<script type="text/javascript" src = "init.js"></script>
+	<script type="text/javascript" src = "util.js"></script>
+	<script type="text/javascript" src = "key.js"></script>
+	<script type="text/javascript" src = "url.js"></script>
+	<script type="text/javascript" src = "index.js"></script>
 </head>
 <body>
 	<h1>Focus-on</h1>
+	<hr>
+	<div id = "inputSelector" class = "button">选取输入框</div>
+	<div id = "keyRecorder" class = "button"></div>
+	<div id = "urlRecorder" class = "button"></div>
 </body>
 </html>
